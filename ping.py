@@ -4,6 +4,9 @@ import socket
 import argparse
 import time
 
+average_time=""
+
+
 def send_icmp(s:socket,address:tuple,icmp_data:bytes):
     s.settimeout(20)
     s.sendto(icmp_data,address)
